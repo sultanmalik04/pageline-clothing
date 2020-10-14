@@ -1,0 +1,14 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.white-background {
+	background-color: white;
+	box-shadow: 0 5px 6px #CCC;
+	transition: 1s ease-in-out;
+}
+
+#dropdownMenuButton {
+	padding-left: 0;
+}
