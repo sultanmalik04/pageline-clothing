@@ -3,12 +3,80 @@
 	padding: 0;
 }
 
+
+/*
+ * NAVBAR 
+ *
+ */
+
+#dropdownMenuButton { padding-left: 0; }
+
 .white-background {
 	background-color: white;
 	box-shadow: 0 5px 6px #CCC;
 	transition: 1s ease-in-out;
 }
 
-#dropdownMenuButton {
-	padding-left: 0;
+
+/*
+ * CAROUSEL 
+ *
+ */
+
+#carouselExampleControls img { height: 700px; }
+
+.carousel-item { position: relative; }
+
+.image-overlay {
+	position: absolute;
+	z-index: 1;
+	left: 15%;
+}
+
+span.image-overlay {
+	top: 50%;
+}
+h1.image-overlay {
+	top: 55%;
+}
+a.image-overlay {
+	top: 63%;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+	width: 80px;
+	height: max-content;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+	width: 40px;
+	height: 40px;
+	margin: auto;
+	padding: 8px;
+	border-radius: 50%;
+	box-shadow: 2px 2px 3px #CCC, -1px -1px 1px #CCC;
+	background: white;
+	color: black;
+}
+
+.carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
+	background: blue;
+	color: white;
+}
+
+
+/*
+ * MEDIA QUERY
+ *
+ */
+
+
+@media (max-width: 800px) {
+	#carouselExampleControls img { height: 500px; }
+}
+
+@media (max-width: 575px) {
+	#carouselExampleControls { padding-top: 56px; }
+	#carouselExampleControls img { height: 360px; }
 }
