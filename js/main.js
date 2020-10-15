@@ -1,24 +1,36 @@
-// function changeBack() {
-// 	var win = window.innerHeight;
-// 	var nav = document.getElementsByTagName("nav")[0].navHeight;
-// 	console.log(win);
-// 	console.log(nav);
-// }
+var nav = document.getElementsByTagName("nav")[0];
+var cartsm = document.getElementById("cart-sm");
+var cartlg = document.getElementById("cart-lg");
 
-// window.onload = function() {
-// 	changeBack();
-// }
+window.onresize = function() {
+	onDimensionChange();
+	setCartPosition();
+}
 
-window.onscroll = function() { scrollFunction() };
-function scrollFunction() {
-	var nav = document.getElementsByTagName("nav")[0];
-	var navHeight = nav.offsetHeight;
+window.onscroll = function() {
+	onDimensionChange();
+}
 
-	if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop>window.innerHeight) {
-		if (!nav.classList.contains('white-background')) {
-			nav.classList.add('white-background');
-		}
+window.onload = function() {
+	onDimensionChange();
+	setCartPosition();
+}
+
+
+function onDimensionChange() {
+	if (nav.offsetWidth<575 || document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop>window.innerHeight) {
+		if (!nav.classList.contains('white-background')) { nav.classList.add('white-background'); }
 	} else {
 		nav.classList.remove('white-background');
+	}
+}
+
+function setCartPosition() {
+	if (nav.offsetWidth<575) {
+		cartsm.classList.remove('d-none');
+		cartlg.classList.add('d-none');
+	} else {
+		cartsm.classList.add('d-none');
+		cartlg.classList.remove('d-none');
 	}
 }
