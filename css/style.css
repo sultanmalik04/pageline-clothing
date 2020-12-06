@@ -1,3 +1,4 @@
+/* Remove All predefined pading & margins */
 * {
 	margin: 0;
 	padding: 0;
@@ -7,47 +8,45 @@
 /*
  * NAVBAR 
  *
- */
-
+*/
+/* Remove left spacing in dropdown toggle btn */
 #dropdownMenuButton { padding-left: 0; }
 
+/* White background to navbar with animation */
 .white-background {
 	background-color: white;
 	box-shadow: 0 5px 6px #CCC;
 	transition: 1s ease-in-out;
 }
 
+
 /*
  * CAROUSEL 
  *
- */
-
+*/
+/* Set same height for all images in carousel */
 #carouselExampleControls img { height: 700px; }
 
-.carousel-item { position: relative; }
-
+/* Container setup div for text on image on carousal */
 .image-overlay {
 	position: absolute;
 	z-index: 1;
 	left: 15%;
 }
 
-span.image-overlay {
-	top: 50%;
-}
-h1.image-overlay {
-	top: 55%;
-}
-a.image-overlay {
-	top: 63%;
-}
+/* Positioning text to be displayed over image */
+span.image-overlay { top: 50%; }
+h1.image-overlay { top: 55%; }
+a.image-overlay { top: 63%; }
 
 
+/* Container for back & next btn for carousel movement */
 .carousel-control-prev, .carousel-control-next {
 	width: 80px;
 	height: max-content;
 }
 
+/* Back & next movement btn design of carousel */
 .carousel-control-prev-icon, .carousel-control-next-icon {
 	width: 40px;
 	height: 40px;
@@ -59,6 +58,7 @@ a.image-overlay {
 	color: black;
 }
 
+/* Hover Design for back & next btn of carousel */
 .carousel-control-prev-icon:hover, .carousel-control-next-icon:hover {
 	background: blue;
 	color: white;
@@ -69,13 +69,16 @@ a.image-overlay {
  * MEDIA QUERY
  *
  */
-
-
+/* Media query for TABLET */
 @media (max-width: 800px) {
+	/* Reduce carousel img height */
 	#carouselExampleControls img { height: 500px; }
 }
 
+/* Media query for MOBILE */
 @media (max-width: 575px) {
+	/* Displace carousel from top, to avoid navbar overlap */
 	#carouselExampleControls { padding-top: 56px; }
+	/* Reduce carousel img height */
 	#carouselExampleControls img { height: 360px; }
 }
